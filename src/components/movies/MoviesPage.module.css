@@ -1,0 +1,45 @@
+.posterList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.poster {
+  width: 160px;
+  height: 200px;
+  margin: 10px;
+}
+
+.posterItem {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition-duration: 300ms;
+}
+.posterItem:hover {
+  transition-duration: 300ms;
+  transform: scale(1.1);
+}
+
+.itemLink {
+  text-align: center;
+  width: 180px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.linkBack {
+  width: 80px;
+  height: 26px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  background-color: hotpink;
+  border: 2px solid black;
+  text-decoration: none;
+  font-size: 16px;
+}

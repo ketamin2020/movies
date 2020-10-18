@@ -1,0 +1,22 @@
+.posterList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.poster {
+  width: 160px;
+  height: 200px;
+  margin: 10px;
+}
+.list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 80px;
+}
+.title {
+  text-align: center;
+}

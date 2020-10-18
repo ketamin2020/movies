@@ -1,0 +1,51 @@
+.linkList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  list-style-type: none;
+  list-style: none;
+  padding: 0;
+  background-color: gray;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.navLink {
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.activeLink {
+  color: red;
+}
+a.navLink:before,
+a.navLink:after {
+  opacity: 0;
+  transition: all 0.3s ease;
+  font-size: 20px;
+}
+a.navLink:before {
+  content: "[";
+}
+a.navLink:after {
+  content: "]";
+}
+
+a.navLink:hover:before {
+  margin-right: 10px;
+  content: "[";
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+  opacity: 1;
+}
+a.navLink:hover:after {
+  margin-left: 10px;
+  content: "]";
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+  opacity: 1;
+}

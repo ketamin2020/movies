@@ -1,0 +1,58 @@
+.poster {
+  width: 400px;
+  height: 480px;
+  margin: 10px;
+}
+.link,
+.navLink {
+  width: 80px;
+  height: 26px;
+  display: inline-block;
+  text-align: center;
+  line-height: 26px;
+  background-color: hotpink;
+  border: 2px solid black;
+  text-decoration: none;
+  font-size: 16px;
+}
+.container {
+  display: flex;
+}
+
+.linkNavigation {
+  display: flex;
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin-top: 50px;
+}
+
+.info {
+  width: 600px;
+  margin-left: 20px;
+}
+.film {
+  font-weight: 800;
+  font-size: 22px;
+}
+.average {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.overview {
+  font-size: 18px;
+  font-weight: 600;
+}
+.genre {
+  margin-left: 10px;
+  font-weight: 600;
+}
+.genreTitle {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.navLink {
+  margin: 10px;
+}

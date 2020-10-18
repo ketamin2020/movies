@@ -1,0 +1,33 @@
+.posterList {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.poster {
+  width: 160px;
+  height: 200px;
+  margin: 10px;
+}
+
+.posterItem {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition-duration: 300ms;
+}
+.posterItem:hover {
+  transition-duration: 300ms;
+  transform: scale(1.1);
+}
+
+.itemLink {
+  text-align: center;
+  width: 180px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 10px;
+}
