@@ -16,6 +16,18 @@ export default class MovieDetailPage extends Component {
       .then((movies) => this.setState({ movies }));
   }
 
+  handleGoBack = () => {
+    const { state } = this.props.location;
+
+    if (state) {
+      this.props.history.push(state.from);
+      return;
+    }
+
+    this.props.history.push({
+      pathname: "/",
+    });
+  };
   render() {
     const { movies } = this.state;
     const { path, url } = this.props.match;
@@ -29,13 +41,15 @@ export default class MovieDetailPage extends Component {
       overview,
       genres,
     } = movies;
+    console.log("moviDetailPage", this.props);
+
     return (
       <>
         {movies && (
           <>
-            <NavLink to="/" className={styles.link}>
-              Go back
-            </NavLink>
+            <button className={styles.btnBack} onClick={this.handleGoBack}>
+              &#8617; Go back
+            </button>
             <div className={styles.container}>
               <div>
                 <img

@@ -43,22 +43,32 @@ export default class MoviesPage extends Component {
   render() {
     const { movies } = this.state;
     const { url } = this.props.match;
+    console.log("moviePage", this.props);
+
     return (
       <>
         <SearchForm onSubmit={this.heandleChangeQuery} />
-        {movies.length > 0 && (
-          <NavLink to="/" className={styles.linkBack}>
-            Go back
-          </NavLink>
-        )}
+
         <ul className={styles.posterList}>
           {movies.length > 0 &&
             movies.map(({ id, original_title, poster_path, title }) => (
               <li key={id} className={styles.posterItem}>
-                <NavLink to={`${url}/${id}`} className={styles.itemLink}>
+                <NavLink
+                  to={{
+                    pathname: `${url}/${id}`,
+                    state: { from: this.props.location },
+                  }}
+                  className={styles.itemLink}
+                >
                   {original_title}
                 </NavLink>
-                <NavLink to={`${url}/${id}`} className={styles.imageLink}>
+                <NavLink
+                  to={{
+                    pathname: `${url}/${id}`,
+                    state: { from: this.props.location },
+                  }}
+                  className={styles.imageLink}
+                >
                   <img
                     src={
                       poster_path
