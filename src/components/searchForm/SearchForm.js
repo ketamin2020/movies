@@ -26,7 +26,7 @@ export default class SearchForm extends Component {
             onChange={this.heandleChange}
           ></input>
           <span className={styles.bar}></span>
-          <label>Search Contact </label>
+          <label>Search movies </label>
           <button className={styles.btnBack} type="submit">
             Search movie
           </button>

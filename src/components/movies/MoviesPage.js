@@ -34,7 +34,7 @@ export default class MoviesPage extends Component {
   heandleChangeQuery = (query) => {
     if (query) {
       this.props.history.push({
-        pathname: this.props.location.pathname,
+        ...this.props.location,
         search: `query=${query}`,
       });
     }
@@ -43,8 +43,6 @@ export default class MoviesPage extends Component {
   render() {
     const { movies } = this.state;
     const { url } = this.props.match;
-    console.log("moviePage", this.props);
-
     return (
       <>
         <SearchForm onSubmit={this.heandleChangeQuery} />

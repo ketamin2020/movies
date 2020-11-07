@@ -41,7 +41,6 @@ export default class MovieDetailPage extends Component {
       overview,
       genres,
     } = movies;
-    console.log("moviDetailPage", this.props);
 
     return (
       <>
@@ -81,12 +80,28 @@ export default class MovieDetailPage extends Component {
                 </p>
                 <ul className={styles.linkNavigation}>
                   <li>
-                    <NavLink to={`${url}/cast`} className={styles.navLink}>
+                    <NavLink
+                      to={{
+                        pathname: `${url}/cast`,
+                        state: {
+                          from: this.props.location.state.from,
+                        },
+                      }}
+                      className={styles.navLink}
+                    >
                       Cast
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink to={`${url}/reviews`} className={styles.navLink}>
+                    <NavLink
+                      to={{
+                        pathname: `${url}/reviews`,
+                        state: {
+                          from: this.props.location.state.from,
+                        },
+                      }}
+                      className={styles.navLink}
+                    >
                       Reviews
                     </NavLink>
                   </li>

@@ -22,10 +22,22 @@ export default class HomePage extends Component {
       <ul className={styles.posterList}>
         {movies.map(({ id, poster_path, title }) => (
           <li key={id} className={styles.posterItem}>
-            <NavLink to={`/movies/${id}`} className={styles.itemLink}>
+            <NavLink
+              to={{
+                pathname: `/movies/${id}`,
+                state: { from: this.props.location.pathname },
+              }}
+              className={styles.itemLink}
+            >
               {title}{" "}
             </NavLink>
-            <NavLink to={`/movies/${id}`} className={styles.imageLink}>
+            <NavLink
+              to={{
+                pathname: `/movies/${id}`,
+                state: { from: this.props.location.pathname },
+              }}
+              className={styles.imageLink}
+            >
               <img
                 src={`https://image.tmdb.org/t/p/w500${poster_path || photo}`}
                 className={styles.poster}
